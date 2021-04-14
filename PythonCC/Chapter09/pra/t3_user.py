@@ -21,7 +21,7 @@ class User():
         print(message)
 
     def greet_user(self):
-        """个性化问候语"""
+        """打印个性化问候语"""
         if self.sex == "male":
             s = "boy"
         else:
