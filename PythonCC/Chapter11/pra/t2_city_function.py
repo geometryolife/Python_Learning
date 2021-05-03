@@ -6,3 +6,13 @@
 # 再编写一个名为test_city_country_population()的测试，核实可以使用类似于
 # 'santiage'、'chile'和'population=5000000'这样的值来调用这个函数。再次运
 # 行test_cities.py，确认测试test_city_country_population()通过了。
+
+
+def city_country(city, country, population=''):
+    """返回描述城市的整洁字符串"""
+    if population:
+        msg = city.title() + ", " + country.title() + " - population " + \
+            str(population)
+    else:
+        msg = city.title() + ", " + country.title()
+    return msg

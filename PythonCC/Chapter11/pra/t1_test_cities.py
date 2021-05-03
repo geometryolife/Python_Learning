@@ -8,7 +8,17 @@
 # 是正确的。运行test_cites.py，确认测试test_city_country()通过了。
 
 
-def city_country(city, country):
-    """返回城市的整洁描述"""
-    msg = city.title() + ', ' + country.title()
-    return msg
+import unittest
+from t1_city_function import city_country
+
+
+class CitiesTestCase(unittest.TestCase):
+    """测试city_function.py"""
+
+    def test_city_country(self):
+        """能够正确地处理像Santiage,Chile这样的城市描述吗?"""
+        city_country_str = city_country('santiage', 'chile')
+        self.assertEqual(city_country_str, 'Santiage, Chile')
+
+
+unittest.main()
