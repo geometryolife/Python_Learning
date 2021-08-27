@@ -6,18 +6,22 @@ arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 
 print("\n----------按行列截取矩阵----------")
 # 截取矩阵第0~1行的数据
-print(arr[0:1], '\n')
+# 截取阵型为二维矩阵的第1行数据
+print(arr[0:1])
+print(arr[0:1].shape, '\n')
 
-# 截取矩阵第0行的数据
-print(arr[0], '\n')
+# 截取矩阵第1行的数据(阵型为一维)
+print(arr[0])
+print(arr[0].shape, '\n')
 
-# 截取矩阵第1行的数据
-print(arr[1], '\n')
+# 截取矩阵第2行的数据(阵型为一维)
+print(arr[1])
+print(arr[1].shape, '\n')
 
-# 截取矩阵第1行的2~4列的数据
+# 截取矩阵第2行的3~5列的数据
 print(arr[1, 2:5], '\n')
 
-# 截取矩阵第1行中所有列的数据
+# 截取矩阵第2行中所有列的数据
 print(arr[1, :], '\n')
 
 # 截取矩阵前两列的数据
@@ -46,6 +50,7 @@ colNum = data.shape[1]
 print(rowNum)
 print(colNum)
 
+# 遍历设置矩阵元素的值
 for x in range(rowNum):
     for y in range(colNum):
         if data[x, y] > 6:
@@ -59,10 +64,13 @@ print(data)
 
 ----------按行列截取矩阵----------
 [[1 2 3 4 5]]
+(1, 5)
 
 [1 2 3 4 5]
+(5,)
 
 [ 6  7  8  9 10]
+(5,)
 
 [ 8  9 10]
 

@@ -4,6 +4,7 @@ print("----------保存矩阵到 CSV 文件----------")
 np.random.seed(1)
 arr = np.random.randn(3, 4)
 
+# 保存数据到 CSV 文件
 np.savetxt('data/test1.csv', arr, delimiter=',', fmt='%0.8f',
            header='rand1,rand2,rand3,rand4')
 
